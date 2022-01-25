@@ -1,0 +1,8 @@
+#!/bin/bash -e
+echo "Removing old autotest..."
+rm -rf ~/autotest
+echo "Updating files..."
+cd ~/
+echo "Cloning repo..."
+git clone https://github.com/iti0201/autotest
+echo "Done!"
