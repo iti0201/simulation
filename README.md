@@ -16,17 +16,6 @@ Kui seadistused on tehtud, siis võib virtuaalmasina käivitada.
 
 ### Troubleshooting
 
-#### NO_VMX (arvutiklassis)
-
-Kui näete sellist pilti, siis tuleb arvuti restartida ja valida käivitamisel "No Hyper-V" režiim.
-
-![Virtualiseerimise viga](https://raw.githubusercontent.com/iti0201/simulation/doc/img/verrvmxnovmx.png)
-
-#### Must ekraan
-
-Kui virtuaalmasin läheb küll näiliselt käima, aga ees on lihtsalt must ekraan, siis vaadake ega ei ole operatsioonisüsteemiks valitud "Ubuntu (32-bit)". Operatsioonisüsteem peab olema "Ubuntu **(64-bit)**".
-Lülitage virtuaalmasin välja ja vahetage operatsioonisüsteem 64-bitiseks.
-
 #### Virtualiseerimine ei tööta (enda arvutil)
 
 Kui virtualiseerimine ei toimi enda arvutil, siis tõenäoliselt on see arvuti BIOS-is välja lülitatud. Virtualiseerimise lubamiseks tuleb minna BIOS-i seadistustesse ja sealt virtualiseerimine sisse lülitada.
