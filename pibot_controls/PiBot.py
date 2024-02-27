@@ -105,6 +105,7 @@ class PiBot:
         rospy.Subscriber("robot/imu/angle", Float32, self.make_callback_for_sensor("rotation_angle"))
 
     def __init__(self, robot_nr=1):
+        self.rotation_angle = "temp"
         # Init node
         rospy.init_node("pibot", anonymous=True)
 
@@ -156,7 +157,8 @@ class PiBot:
         self.CAMERA_FIELD_OF_VIEW = (62.2, 48.8)  # Horizontal,vertical
 
         # Wait for initialisation to finish
-        rospy.sleep(2)
+        while self.rotation_angle == "temp":
+            rospy.sleep(0.1)
 
         self.rotation_angle = 0
         # Rotation
